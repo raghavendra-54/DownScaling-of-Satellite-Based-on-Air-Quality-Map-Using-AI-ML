@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>AIR</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="index.html">
+            <img src="/static/images/logo.png" alt="" />
+            <span>
+              AIR
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+
+                <li class="nav-item">
+                  <a class="nav-link" href="preprocess">PREPROCESSING</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="model">MODEL TRAINING</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="prediction">PREDICTION</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- hero section -->
+    <section class="hero_section">
+      <div class="hero_detail">
+        <center>
+          {% if msg %}
+          <h2>{{msg}}</h2>  
+          {% endif %}
+          
+          <form action="/model" method="post">
+            <!--								<a href="/upload" class="btn btn-primary btn-lg">Get Started</a>-->
+            <center><select name="algo"
+                style="height: 52.22222px;width: 302.22222px; border-color :color rgb(11, 203, 236)">
+                <option style="color:rgb(0, 13, 15);" value="0">Choose an Algorithm</option>
+                <option style="color:rgb(1, 12, 14);" value="1">RandomForestClassifier</option>
+                <option style="color:rgb(1, 15, 17);" value="2">DecisionTREE</option>
+                <option style="color:rgb(1, 15, 17);" value="3">AdaBoost</option>
+                <option style="color:rgb(1, 15, 17);" value="4">KNeighbors</option>
+
+              </select></center>
+            <input class="btn btn-primary" type="submit" value="Submit" style="margin-left: 0px;margin-top: 33px;">
+          </form>
+          
+        </center>
+
+      </div>
+      <!-- <div class="hero_btn-box"> -->
+
+
+      <!-- end info_section -->
+
+      <!-- footer section -->
+      <!-- <section class="container-fluid footer_section"> -->
+      <!-- <p>
+            &copy; 2019 All Rights Reserved By
+            <a href="https://html.design/">Free Html Templates</a>
+          </p> -->
+    </section>
+    <!-- footer section -->
+
+    <script type="text/javascript" src="/static/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+</body>
+
+</html>

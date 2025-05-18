@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Air</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="index.html">
+            <img src="/static/images/logo.png" alt="" />
+            <span>
+              AIR
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+
+                <li class="nav-item">
+                  <a class="nav-link" href="preprocess">PREPROCESSING</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="model">MODEL TRAINING</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="prediction">PREDICTION</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- hero section -->
+    <section class="hero_section">
+      <div class="hero_detail">
+        <form action="{{url_for('prediction')}}" method="post" enctype="multipart/form-data">
+          <div
+            style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <select name="city" style="width:187px; height:33.39px;">
+              <li>Select City:</li>
+              <option value=9>Select City</option>
+              <option value=0>Amaravthi</option>
+              <option value=1>Amritsar</option>
+              <option value=2>Chandigarh</option>
+              <option value=3>Delhi</option>
+              <option value=4>Gurugram</option>
+              <option value=5>Hyderabad</option>
+              <option value=6>Kolkata</option>
+              <option value=7>Patna</option>
+              <option value=8>Visakhapatnam</option>
+            </select>
+            <div style="margin: 10px;">
+              <!-- <label for="P">Ratio of Phosphorous content in soil:</label><br> -->
+              <input type="text" id="PM2.5" name="PM2.5" placeholder="Enter PM2.5:" style="width: 200px;">
+            </div>
+            <div style="margin: 10px;">
+              <!-- <label for="K">Ratio of Potassium content in soil:</label><br> -->
+              <input type="text" id="PM10" name="PM10" placeholder="Enter PM10: " style="width: 200px;">
+            </div>
+            <div style="margin: 10px;">
+              <!-- <label for="temperature">Temperature (°C):</label><br> -->
+              <input type="text" id="NO" name="NO" placeholder="Enter NO:" style="width: 200px;">
+            </div>
+            <div style="margin: 10px;">
+              <!-- <label for="humidity">Relative Humidity (%):</label><br> -->
+              <input type="text" id="NO2" name="NO2" placeholder="Enter NO2:" style="width: 200px;">
+            </div>
+            <div style="margin: 10px;">
+              <!-- <label for="ph">Soil pH Value:</label><br> -->
+              <input type="text" id="NOx" name="NOx" placeholder="Enter NOx:" style="width: 200px;">
+            </div>
+            <div style="margin: 10px;">
+              <!-- <label for="rainfall">Rainfall (mm):</label><br> -->
+              <input type="text" id="NH3" name="NH3" placeholder="Enter NH3:" style="width: 200px;">
+            </div>
+            <div style="margin: 10px;">
+              <!-- <label for="P">Ratio of Phosphorous content in soil:</label><br> -->
+              <input type="text" id="CO" name="CO" placeholder="Enter CO:" style="width: 200px;">
+            </div>
+            <div style="margin: 10px;">
+              <!-- <label for="P">Ratio of Phosphorous content in soil:</label><br> -->
+              <input type="text" id="SO2" name="SO2" placeholder="Enter SO2:" style="width: 200px;">
+            </div>
+            <div style="margin: 10px;">
+              <!-- <label for="P">Ratio of Phosphorous content in soil:</label><br> -->
+              <input type="text" id="O3" name="O3" placeholder="Enter O3:" style="width: 200px;">
+            </div>
+            <div style="margin: 10px;">
+              <!-- <label for="P">Ratio of Phosphorous content in soil:</label><br> -->
+              <input type="text" id="Benzene" name="Benzene" placeholder="Enter Benzene:" style="width: 200px;">
+            </div>
+            <div style="margin: 10px;">
+              <!-- <label for="P">Ratio of Phosphorous content in soil:</label><br> -->
+              <input type="text" id="Toluene" name="Toluene" placeholder="Enter Toluene:" style="width: 200px;">
+            </div>
+            <div style="margin: 10px;">
+              <!-- <label for="P">Ratio of Phosphorous content in soil:</label><br> -->
+              <input type="text" id="Xylene" name="Xylene" placeholder="Enter Xylene:" style="width: 200px;">
+            </div>
+            <div style="margin: 10px;">
+              <!-- <label for="P">Ratio of Phosphorous content in soil:</label><br> -->
+              <input type="text" id="AQI" name="AQI" placeholder="Enter AQI:" style="width: 200px;">
+            </div>
+
+
+          </div>
+
+          <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <input class="btn btn-primary" type="submit" value="Predict">
+          </div>
+          <center style="color: teal;"><h2><b>{{msg}}</b></h2></center>
+        </form>
+        <!-- <center style="color: teal;"><b>{{msg}}</b></center> -->
+      </div>
+      <!-- <div class="hero_btn-box"> -->
+
+
+      <!-- end info_section -->
+
+      <!-- footer section -->
+      <!-- <section class="container-fluid footer_section"> -->
+      <!-- <p>
+            &copy; 2019 All Rights Reserved By
+            <a href="https://html.design/">Free Html Templates</a>
+          </p> -->
+    </section>
+    <!-- footer section -->
+
+    <script type="text/javascript" src="/static/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+</body>
+
+</html>
